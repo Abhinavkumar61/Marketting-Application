@@ -1,0 +1,90 @@
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<div class="container" ng-controller="addStudents_controller">
+    <div class="row">
+        <div class="col-lg-6 col-lg-offset-2">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="firstName">First Name:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="firstName" ng-model="studentInfo.first_name" placeholder="Enter FirstName" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="lastName">Last Name:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="lastName" ng-model="studentInfo.last_name" placeholder="Enter LastName" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="email">Email:</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="email" ng-model="studentInfo.email" placeholder="Enter email" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="school">School:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="school" ng-model="studentInfo.school" placeholder="Enter University" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="startdate">Start Date:</label>
+
+                    <md-datepicker style="margin-top: 13px;" id="StartDate" ng-model="studentInfo.start_date" md-placeholder="Enter date"></md-datepicker>
+
+                    <style>
+                        md-datepicker button md-icon svg path {
+                            color: white;
+                        }
+                        
+                        .md-datepicker-input-container input {
+                            color: white;
+                        }
+
+                    </style>
+
+
+
+                </div>
+
+<!--                <div class="form-group">-->
+<!--                    <label class="control-label col-sm-2" for="client_count">Client Count:</label>-->
+<!--                    <div class="col-sm-10">-->
+<!--                        <input type="number" class="form-control" id="clientCount" ng-model="studentInfo.client_count" placeholder="Enter no. of client Interviews" required>-->
+<!--                    </div>-->
+<!--                </div>-->
+                <!--
+<div class="form-group">
+    <label class="control-label col-sm-2" for="clientName">Add client</label>
+    <div class="col-sm-10">
+-->
+                <!--
+                       <div ng-if="studentInfo.client_name.length>0" ng-repeat="cname in studentInfo.client_name">
+                        {{cname}}
+                        </div>
+-->
+                <!--
+                        <input type="text" class="form-control" id="addStudent" ng-model="studentInfo.clientName" placeholder="Add client"><button ng-click="studentInfo.add()">Add+</button>
+                    </div>
+                </div>
+-->
+
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" ng-click="getInfo()" class="btn btn-default">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+</div>
